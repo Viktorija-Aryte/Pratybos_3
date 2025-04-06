@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "ND3.Main",
+            "projectName": "Pratybos_3_4ceeac3c"
+        },
+        {
+            "type": "java",
+            "name": "TTest",
+            "request": "launch",
+            "mainClass": "TTest",
+            "projectName": "Pratybos_3_4ceeac3c"
+        },
+        {
+            "type": "java",
             "name": "Test",
             "request": "launch",
             "mainClass": "Test",

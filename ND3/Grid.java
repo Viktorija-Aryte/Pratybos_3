@@ -1,4 +1,4 @@
-package ConwayGameOfLife;
+package ND3;
 public class Grid {
 
     //the 2D array that will represent the grid
