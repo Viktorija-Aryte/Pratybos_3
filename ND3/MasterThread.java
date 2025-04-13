@@ -34,8 +34,9 @@ public class MasterThread extends Thread
         this.barrier = new CyclicBarrier(numOfSlaves + 1, () ->
         {
             copyGrid();
-            current_grid.print_grid();
-            System.out.println("All threads reached the barrier. Proceeding to the next cycle...\n");
+            /* THE PRINT */
+            // current_grid.print_grid();
+            // System.out.println("All threads reached the barrier. Proceeding to the next cycle...\n");
         });
     
         /* GRID INIT */
@@ -68,20 +69,24 @@ public class MasterThread extends Thread
             }
             for(int i = 0; i < numOfCyckles; i++)
             {
-                System.out.println("\n Master: Strating task cycle" + (i + 1));
+                /* THE PRINT */
+                //System.out.println("\n Master: Strating task cycle" + (i + 1));
 
                 // // Simulate master's work for the cycle
                 // System.out.println("Master is performing its task...");
                 // Thread.sleep(400); // Simulated work
 
                 //wait at the barrier
-                System.out.println("Master is waiting at the barrier for slave cycles to finisg ...");
+                /* THE PRINT */
+                // System.out.println("Master is waiting at the barrier for slave cycles to finisg ...");
                 barrier.await();
 
-                System.out.println("Master: Completed cycle " + (i + 1));
+                /* THE PRINT */
+                // System.out.println("Master: Completed cycle " + (i + 1));
             }
 
-            System.out.println("Master: Shutting down the slave threads...");
+            /* THE PRINT */
+            // System.out.println("Master: Shutting down the slave threads...");
             for(SlaveThread slave : slaves)
             {
                 slave.shutdown();

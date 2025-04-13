@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ConwayGameOfLIfe",
+            "request": "launch",
+            "mainClass": "NoThreadingConwayGameOfLife.ConwayGameOfLIfe",
+            "projectName": "Pratybos_3_4ceeac3c"
+        },
+        {
+            "type": "java",
+            "name": "ConwayGameOfLIfe",
+            "request": "launch",
+            "mainClass": "ND3.ConwayGameOfLIfe",
+            "projectName": "Pratybos_3_4ceeac3c"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "ND3.Main",

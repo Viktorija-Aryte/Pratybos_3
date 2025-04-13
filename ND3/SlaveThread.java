@@ -32,7 +32,8 @@ public class SlaveThread extends Thread
             while(running)
             {
                 //Simulate task
-                System.out.println("Slave " + slaveID + " is performing a task...");
+                /* THE PRINT */
+                // System.out.println("Slave " + slaveID + " is performing a task...");
 
                 /* SLAVE DOES CALULATIONS FOR THE ASSIGNED ROWS */
 
@@ -64,7 +65,8 @@ public class SlaveThread extends Thread
                 // Thread.sleep((long) (Math.random() * 100));
                 
                 //wait at the barrier
-                System.out.println("Slave " + slaveID + " is waiting at the barrier");
+                /* THE PRINT */
+                // System.out.println("Slave " + slaveID + " is waiting at the barrier");
                 barrier.await();
             }
         }

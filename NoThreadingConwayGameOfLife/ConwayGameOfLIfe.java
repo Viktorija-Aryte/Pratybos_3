@@ -1,10 +1,15 @@
-package ND3;
+package NoThreadingConwayGameOfLife;
 
+import ND3.Grid;
+
+/*
+ * WORK WITH on one thread no multithreading 
+ */
 public class ConwayGameOfLIfe
 {
     private Grid starting_grid;
     private int generation_amount;
-    private static final int GRID_SIZE = 10;
+    private static final int GRID_SIZE = 2010;
 
     public ConwayGameOfLIfe(int gen_amount)
     {
@@ -40,14 +45,14 @@ public class ConwayGameOfLIfe
     }
     public void perform()
     {
-        System.out.println("The starting grid: ");
-        starting_grid.print_grid();
+        // System.out.println("The starting grid: ");
+        // starting_grid.print_grid();
 
         for(int i = 0; i < generation_amount; i++)
         {
-            System.out.println("The generation " + (i+1) + ":");
+            // System.out.println("The generation " + (i+1) + ":");
             doCalculation();
-            starting_grid.print_grid();
+            // starting_grid.print_grid();
         }
     }
 
@@ -87,6 +92,21 @@ public class ConwayGameOfLIfe
                 starting_grid.set_value(i, j, newValue);
             }
         }
+    }
+
+    public static void main(String[] args)
+    {
+        // int grid_size = 
+        int generation_a = 100;
+        ConwayGameOfLIfe test = new ConwayGameOfLIfe(generation_a);
+
+        long startTime = System.currentTimeMillis();
+        test.perform();
+        long endTime = System.currentTimeMillis();
+
+        long executionTime = endTime - startTime;
+
+        System.out.println("ExecutionTime: " + executionTime + " ms");
     }
 
     
